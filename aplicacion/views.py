@@ -29,9 +29,7 @@ def login_view(request):
 def pag_principal(request):
 	return render(request,'base.html')
 
-def logout_view(request):
-	logout(request)
-	return render(request,'login.html')
+
 
 '''def registro(request):
 	if request.method == 'POST':
