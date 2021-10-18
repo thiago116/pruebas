@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Registro</title>
+	<link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		
+		<form method="POST">
+
+			{% csrf_token %}
+
+			
+			<h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+			<div class="form-group">
+				<input  class="form-control" type="text" placeholder="Usuario" name="usuario" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="password" placeholder="Contraseña" name="password" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="password" placeholder="Confirmacion Contraseña" name="password_confirmation" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="text" placeholder="Nombre" name="nombre" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="text" placeholder="Apellido" name="apellido" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="email" placeholder="Email" name="email" required="true">
+			</div>
+
+			<button class="btn btn-primary btn-block mt-3" type="submit">Registrarse</button>
+			{% if error %}
+			<p class="alert alert-danger mt-3">{{ error }}</p>
+			{% endif %}
+
+		</form>
+
+	</div>
+
+
+
+</body>
+</html>

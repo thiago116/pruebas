@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Registro</title>
+	<link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		
+		<form method="POST">
+
+			{% csrf_token %}
+
+			
+			<h1 class="h3 mb-3 font-weight-normal">Reserva tu cita</h1>
+			<div class="form-group">
+				<input  class="form-control" type="text" placeholder="Asunto" name="{form.asunto}" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="text" placeholder="Mensaje" name="{form.mensaje}" required="true">
+			</div>
+
+			<div class="form-group">
+				<input  class="form-control" type="text" placeholder="Email" name="{form.email}" required="true">
+			</div>
+
+			<button class="btn btn-primary btn-block mt-3" type="submit">Registrarse</button>
+			{% if error %}
+			<p class="alert alert-danger mt-3">{{ error }}</p>
+			{% endif %}
+
+		</form>
+
+	</div>
+
+
+
+</body>
+</html>

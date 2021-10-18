@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+
+    {% block head_content %}
+
+    {% endblock %}
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "dist/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Favicons -->
+    <nav class="navbar navbar-light bg-light border-color-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="C:/Users/Thiago/Desktop/ProyectosDjango/senasoft/aplicacion/static/img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          Empresa Comfamiliar
+        </a>
+      </div>
+    </nav>
+
+  
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'citas' %}">Citas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'historial' %}">Historia Clinica</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'examen' %}">Examenes</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'paciente' %}">Pacientes</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'laboratorio' %}">Laboratorios</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Salir</a>
+      </li>
+    </ul>
+
+    {% block container %}
+
+    {% endblock%}
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_content %}
+  <title>Laboratorio</title>
+  
+{% endblock %}
+
+{% block container %}
+		<center><table>
+		<th>
+			<td>
+				<section id="container">
+        			<div class="form_register" style="width: 450px; margin: auto;">
+           			 <h1 style="color: #3c93b0;" class="mt-5">Crear Curso</h1>
+            			<hr style="    background: #ccc; height: 1px; margin: 10px 0; display: block;" class="mt-3">
+
+            <form method="POST" style="background: #fff;margin: auto;padding: 20px 50px;border: 1px solid #d1d1d1;">
+                {% csrf_token %}
+                <div style="display: block; font-size: 12pt; font-family: 'GothamBook'; margin: 15px auto 5px auto";>
+                <label for="nombre">Nombre del Curso</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Curso" style="display: block; width: 100%;font-size: 11pt; padding: 5px;border: 1px solid #85929e;border-radius: 5px; required" required>
+                <label for="descripcion">Descripcion</label>
+                <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                <label for="cupos">Cupos</label>
+                <input type="text" name="cupos" id="cupos" placeholder="Cupos" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                <label for="interes">Area de interes</label>
+                <input type="text" name="interes" id="interes" placeholder="Area de interes" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                <label for="duracion">Duracion</label>
+                <input type="text" name="duracion" id="duracion" placeholder="Duracion" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                <input type="submit" value="Crear curso" class="btn_save" style="font-size: 12pt;background: #12a4c6;padding: 10px;color: #fff;letter-spacing: 1px;border: 0;cursor: pointer;
+    			margin: 15px auto;" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" onclick="return ConfirmCreate()" >
+        </div>
+			</td>
+		</th>
+
+	</center></table>
+{% endblock%}

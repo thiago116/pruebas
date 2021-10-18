@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_content %}
+  <title>Pacientes</title>
+{% endblock %}
+
+{% block container %}
+
+		<table class="table col-12 table-responsive">
+        <center><thead class="text-center">
+            <tr class="mt-5">
+                <td style="color: #1d68a7">ID</td>
+                <td style="color: #1d68a7">Nombre</td>
+                <td style="color: #1d68a7">Apellido</td>
+                <td style="color: #1d68a7">Correo</td>
+                <td style="color: #1d68a7">Cedula</td>
+                <td style="color: #1d68a7">Tipo de Sangre</td>
+                <td style="color: #1d68a7">Telefono</td>
+                <td style="color: #1d68a7">Fecha de nacimiento</td>
+                <td style="color: #1d68a7">Estrato</td>
+                <td style="color: #1d68a7">Grupo Familiar</td>
+
+            </tr>
+         </center></thead>
+        <tbody>
+            <tr>
+            	{% for Pacien in paciente %}
+            		
+            	
+            	<td style="color: #1d68a7">{{ Pacien.id }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.Nombre }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.Apellido }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.Correo }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.Cedula }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.TipoSangre }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.Telefono }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.FechaNacimiento }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.Estrato }}</td>
+            	<td style="color: #1d68a7">{{ Pacien.IdGrupoFamiliar }}</td>
+            	{% endfor %}
+                <br>
+            </tr>
+        </tbody>
+
+   </table>
+
+{% endblock%}
+
